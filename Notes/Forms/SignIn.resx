@@ -118,21 +118,135 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelNotSign.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 250</value>
+  <data name="buttonSignIn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9.75pt, style=Bold</value>
+  </data>
+  <data name="buttonSignIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 175</value>
+  </data>
+  <data name="buttonSignIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonSignIn.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="buttonSignIn.Text" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="&gt;&gt;buttonSignIn.Name" xml:space="preserve">
+    <value>buttonSignIn</value>
+  </data>
+  <data name="&gt;&gt;buttonSignIn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSignIn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonSignIn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonSignUp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 9.75pt, style=Bold</value>
+  </data>
+  <data name="buttonSignUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 249</value>
+  </data>
+  <data name="buttonSignUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="buttonSignUp.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="buttonSignUp.Text" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="&gt;&gt;buttonSignUp.Name" xml:space="preserve">
+    <value>buttonSignUp</value>
   </data>
   <data name="&gt;&gt;buttonSignUp.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;buttonSignIn.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;buttonSignUp.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="textBoxUsername.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 11.25pt</value>
+  <data name="&gt;&gt;buttonSignUp.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="labelNotSign.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelNotSign.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 12pt</value>
+  </data>
+  <data name="labelNotSign.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 250</value>
+  </data>
+  <data name="labelNotSign.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 19</value>
+  </data>
+  <data name="labelNotSign.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="labelNotSign.Text" xml:space="preserve">
+    <value>Not Signed In?</value>
+  </data>
+  <data name="&gt;&gt;labelNotSign.Name" xml:space="preserve">
+    <value>labelNotSign</value>
+  </data>
+  <data name="&gt;&gt;labelNotSign.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelNotSign.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelNotSign.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelPassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 12pt, style=Bold</value>
+  </data>
+  <data name="labelPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 126</value>
+  </data>
+  <data name="labelPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 19</value>
+  </data>
+  <data name="labelPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="labelPassword.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.Name" xml:space="preserve">
+    <value>labelPassword</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelUsername.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelUsername.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 12pt, style=Bold</value>
+  </data>
+  <data name="labelUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 89</value>
+  </data>
+  <data name="labelUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 19</value>
+  </data>
+  <data name="labelUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="labelUsername.Text" xml:space="preserve">
     <value>Username</value>
@@ -140,254 +254,167 @@
   <data name="&gt;&gt;labelUsername.Name" xml:space="preserve">
     <value>labelUsername</value>
   </data>
-  <data name="textBoxUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 26</value>
+  <data name="&gt;&gt;labelUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelNotSign.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 19</value>
+  <data name="&gt;&gt;labelUsername.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelSignIn.Name" xml:space="preserve">
-    <value>labelSignIn</value>
+  <data name="&gt;&gt;labelUsername.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textBoxPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
   </data>
   <data name="textBoxPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 120</value>
   </data>
-  <data name="labelNotSign.Text" xml:space="preserve">
-    <value>Not Signed In?</value>
+  <data name="textBoxPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 26</value>
   </data>
-  <data name="buttonSignIn.Text" xml:space="preserve">
-    <value>Sign In</value>
+  <data name="textBoxPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="labelUsername.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="&gt;&gt;textBoxPassword.Name" xml:space="preserve">
+    <value>textBoxPassword</value>
   </data>
-  <data name="labelWelcome.Text" xml:space="preserve">
-    <value>Welcome to Notes</value>
+  <data name="&gt;&gt;textBoxPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBoxUsername.Name" xml:space="preserve">
-    <value>textBoxUsername</value>
+  <data name="&gt;&gt;textBoxPassword.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxPassword.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="textBoxUsername.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 11.25pt</value>
+  </data>
+  <data name="textBoxUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 83</value>
+  </data>
+  <data name="textBoxUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 26</value>
   </data>
   <data name="textBoxUsername.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="labelPassword.Text" xml:space="preserve">
-    <value>Password</value>
+  <data name="&gt;&gt;textBoxUsername.Name" xml:space="preserve">
+    <value>textBoxUsername</value>
+  </data>
+  <data name="&gt;&gt;textBoxUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxUsername.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxUsername.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelSignIn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelSignIn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 14.25pt, style=Bold</value>
+  </data>
+  <data name="labelSignIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 44</value>
+  </data>
+  <data name="labelSignIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 23</value>
+  </data>
+  <data name="labelSignIn.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="labelSignIn.Text" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="&gt;&gt;labelSignIn.Name" xml:space="preserve">
+    <value>labelSignIn</value>
+  </data>
+  <data name="&gt;&gt;labelSignIn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSignIn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelSignIn.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelWelcome.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelWelcome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 14.25pt, style=Bold</value>
+  </data>
+  <data name="labelWelcome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 7</value>
+  </data>
+  <data name="labelWelcome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 23</value>
+  </data>
+  <data name="labelWelcome.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelWelcome.Text" xml:space="preserve">
+    <value>Welcome to Notes</value>
+  </data>
+  <data name="&gt;&gt;labelWelcome.Name" xml:space="preserve">
+    <value>labelWelcome</value>
+  </data>
+  <data name="&gt;&gt;labelWelcome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelWelcome.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelWelcome.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="checkBoxShowPassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxShowPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 152</value>
+  </data>
+  <data name="checkBoxShowPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="checkBoxShowPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="checkBoxShowPassword.Text" xml:space="preserve">
+    <value>Show Password</value>
+  </data>
+  <data name="&gt;&gt;checkBoxShowPassword.Name" xml:space="preserve">
+    <value>checkBoxShowPassword</value>
+  </data>
+  <data name="&gt;&gt;checkBoxShowPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxShowPassword.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxShowPassword.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>298, 279</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="labelNotSign.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 12pt</value>
-  </data>
-  <data name="labelPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="buttonSignIn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 9.75pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;labelNotSign.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelPassword.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 89</value>
-  </data>
-  <data name="labelPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 19</value>
-  </data>
-  <data name="buttonSignUp.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;textBoxPassword.Name" xml:space="preserve">
-    <value>textBoxPassword</value>
-  </data>
-  <data name="&gt;&gt;textBoxUsername.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelUsername.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonSignUp.Text" xml:space="preserve">
-    <value>Sign Up</value>
-  </data>
-  <data name="&gt;&gt;labelWelcome.Name" xml:space="preserve">
-    <value>labelWelcome</value>
-  </data>
-  <data name="labelSignIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 23</value>
-  </data>
-  <data name="&gt;&gt;buttonSignUp.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="labelSignIn.Text" xml:space="preserve">
+  <data name="$this.Text" xml:space="preserve">
     <value>Sign In</value>
-  </data>
-  <data name="&gt;&gt;textBoxPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonSignIn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelNotSign.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="labelSignIn.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="buttonSignUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 249</value>
-  </data>
-  <data name="labelWelcome.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelPassword.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonSignUp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 9.75pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;labelNotSign.Name" xml:space="preserve">
-    <value>labelNotSign</value>
-  </data>
-  <data name="&gt;&gt;labelSignIn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="labelWelcome.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 14.25pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;labelWelcome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 83</value>
-  </data>
-  <data name="labelPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 126</value>
-  </data>
-  <data name="&gt;&gt;buttonSignUp.Name" xml:space="preserve">
-    <value>buttonSignUp</value>
-  </data>
-  <data name="&gt;&gt;textBoxUsername.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="labelSignIn.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="buttonSignIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 23</value>
-  </data>
-  <data name="labelWelcome.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;labelWelcome.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;labelWelcome.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="textBoxPassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 11.25pt</value>
-  </data>
-  <data name="&gt;&gt;textBoxPassword.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="labelUsername.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonSignIn.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;labelUsername.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;labelPassword.Name" xml:space="preserve">
-    <value>labelPassword</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>SignIn</value>
   </data>
-  <data name="buttonSignIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 152</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBoxUsername.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;buttonSignIn.Name" xml:space="preserve">
-    <value>buttonSignIn</value>
-  </data>
-  <data name="&gt;&gt;labelNotSign.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonSignUp.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="labelWelcome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 23</value>
-  </data>
-  <data name="textBoxPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;buttonSignIn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonSignUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="labelPassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 12pt, style=Bold</value>
-  </data>
-  <data name="labelUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 19</value>
-  </data>
-  <data name="labelUsername.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 12pt, style=Bold</value>
-  </data>
-  <data name="labelNotSign.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Sign In</value>
-  </data>
-  <data name="&gt;&gt;labelSignIn.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="labelSignIn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 14.25pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;labelUsername.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 26</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>298, 279</value>
-  </data>
-  <data name="&gt;&gt;labelSignIn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxPassword.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="labelSignIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 44</value>
-  </data>
-  <data name="labelPassword.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelWelcome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 7</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

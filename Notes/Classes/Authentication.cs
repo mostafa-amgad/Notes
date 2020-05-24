@@ -16,6 +16,7 @@ namespace Notes.Classes
         const string appClientId = "1pe4jp1nmsqb19ta0sf4sgrjt5";
         const string poolId = "us-east-1_DNd1jIHmH";
         static RegionEndpoint region = RegionEndpoint.USEast1;
+        static bool isSignedIn = false;
 
         public static async Task SignUp(string email, string username, string password)
         {
@@ -66,6 +67,7 @@ namespace Notes.Classes
             try
             {
                 AuthFlowResponse authFlow = await cognitoUser.StartWithSrpAuthAsync(authRequest).ConfigureAwait(false);
+                isSignedIn = true;
                 Debug.WriteLine("SUCC");
             }
             catch(Exception e)
@@ -73,6 +75,23 @@ namespace Notes.Classes
                 MessageBox.Show(e.Message);
                 return;
             }
+        }
+
+        public static string GetCurrentUsername()
+        {
+            AmazonCognitoIdentityProviderClient providerClient = new AmazonCognitoIdentityProviderClient(new AnonymousAWSCredentials()
+               , region);
+
+            CognitoUserPool userPool = new CognitoUserPool(poolId, appClientId, providerClient);
+           
+            Debug.WriteLine(userPool.GetUser().Username);
+
+            return null;
+        }
+
+        public static bool GetLoginStatus()
+        {
+            return isSignedIn;
         }
     }
 }

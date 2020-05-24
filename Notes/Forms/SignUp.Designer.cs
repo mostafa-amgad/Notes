@@ -38,6 +38,7 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.labelSignUp = new System.Windows.Forms.Label();
+            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonGoBack
@@ -90,10 +91,17 @@
             resources.ApplyResources(this.labelSignUp, "labelSignUp");
             this.labelSignUp.Name = "labelSignUp";
             // 
+            // checkBoxShowPassword
+            // 
+            resources.ApplyResources(this.checkBoxShowPassword, "checkBoxShowPassword");
+            this.checkBoxShowPassword.Name = "checkBoxShowPassword";
+            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            // 
             // SignUp
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.checkBoxShowPassword);
             this.Controls.Add(this.buttonGoBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxEmail);
@@ -120,5 +128,6 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label labelSignUp;
+        private System.Windows.Forms.CheckBox checkBoxShowPassword;
     }
 }
