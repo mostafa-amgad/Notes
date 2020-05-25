@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Amazon;
@@ -17,9 +18,10 @@ namespace Notes.Classes
         const string poolId = "us-east-1_DNd1jIHmH";
         static RegionEndpoint region = RegionEndpoint.USEast1;
         static bool isSignedIn = false;
+        public static string Username { get; set; }
 
         public static async Task SignUp(string email, string username, string password)
-        {
+        {  
             AmazonCognitoIdentityProviderClient providerClient = new AmazonCognitoIdentityProviderClient(new AnonymousAWSCredentials()
                 , region);
 
@@ -42,6 +44,8 @@ namespace Notes.Classes
             {
                 SignUpResponse response = await providerClient.SignUpAsync(signUpRequest);
                 Debug.WriteLine("SUCC");
+                isSignedIn = true;
+                Username = username;
             }
             catch(Exception e)
             {
@@ -68,7 +72,7 @@ namespace Notes.Classes
             {
                 AuthFlowResponse authFlow = await cognitoUser.StartWithSrpAuthAsync(authRequest).ConfigureAwait(false);
                 isSignedIn = true;
-                Debug.WriteLine("SUCC");
+                Username = cognitoUser.Username.ToString();
             }
             catch(Exception e)
             {
@@ -90,7 +94,7 @@ namespace Notes.Classes
         }
 
         public static bool GetLoginStatus()
-        {
+        { 
             return isSignedIn;
         }
     }

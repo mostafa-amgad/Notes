@@ -20,7 +20,7 @@ namespace Notes.Forms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            DatabaseConnection.GetInstance().Insert("mosta12", richTextBoxNote.Text, textBoxTitle.Text);
+            DatabaseConnection.GetInstance().Insert(Authentication.Username, richTextBoxNote.Text, textBoxTitle.Text);
         }
     }
 }

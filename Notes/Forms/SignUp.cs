@@ -23,6 +23,14 @@ namespace Notes.Forms
         {
             Debug.WriteLine(textBoxEmail.Text.ToString());
             Authentication.SignUp(textBoxEmail.Text, textBoxUsername.Text, textBoxPassword.Text).Wait();
+
+            if(Authentication.GetLoginStatus())
+            {
+                Hide();
+                MyNotes notes = new MyNotes();
+                notes.ShowDialog();
+                Close();
+            }
         }
 
         private void buttonGoBack_Click(object sender, EventArgs e)

@@ -14,16 +14,14 @@ namespace Notes.Forms
 {
     public partial class MyNotes : Form
     {
-        DataTable dataTable = new DataTable();
         public MyNotes()
         {
             InitializeComponent();
-          
         }
 
         private void MyNotes_Load(object sender, EventArgs e)
         {
-            List<Note> notes = DatabaseConnection.GetInstance().GetAll("mosta12");
+            List<Note> notes = DatabaseConnection.GetInstance().GetAll(Authentication.Username);
             for (int i = 0; i < notes.Count; i++)
             {
                 dataGridViewNotes.Rows.Add(notes[i].noteTitle, notes[i].note, notes[i].image, "Delete");
