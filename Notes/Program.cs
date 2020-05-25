@@ -1,8 +1,6 @@
-﻿using Notes.Forms;
+﻿using Notes.Classes;
+using Notes.Forms;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Notes
@@ -17,7 +15,17 @@ namespace Notes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignIn());
+
+            Authentication.Username = TextFile.ReadFromFile("Files\\CurrentUser.txt");
+            if (Authentication.Username == null || Authentication.Username == "")
+            {
+                Application.Run(new SignIn());
+            }
+            else
+            {
+                Application.Run(new MyNotes());
+            }
+
         }
     }
 }

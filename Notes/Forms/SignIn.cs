@@ -13,6 +13,7 @@ namespace Notes.Forms
 
         private void buttonSignIn_Click(object sender, EventArgs e)
         {
+            TextFile.WriteInFile("Files\\CurrentUser.txt", textBoxUsername.Text);
             Authentication.SignIn(textBoxUsername.Text, textBoxPassword.Text).Wait();
 
             if(Authentication.GetLoginStatus())
