@@ -28,112 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labeladdnote = new System.Windows.Forms.Label();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.textBoxTitle = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.richTextBoxNote = new System.Windows.Forms.RichTextBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonSignOut = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.informationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notesDataSet = new Notes.notesDataSet();
+            this.informationTableAdapter = new Notes.notesDataSetTableAdapters.informationTableAdapter();
+            this.buttonAddNote = new System.Windows.Forms.Button();
+            this.labelMyNotes = new System.Windows.Forms.Label();
+            this.dataGridViewNotes = new System.Windows.Forms.DataGridView();
+            this.noteTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.informationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notesDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).BeginInit();
             this.SuspendLayout();
             // 
-            // labeladdnote
+            // informationBindingSource
             // 
-            this.labeladdnote.AutoSize = true;
-            this.labeladdnote.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeladdnote.Location = new System.Drawing.Point(12, 9);
-            this.labeladdnote.Name = "labeladdnote";
-            this.labeladdnote.Size = new System.Drawing.Size(177, 29);
-            this.labeladdnote.TabIndex = 0;
-            this.labeladdnote.Text = "Add a new note:";
+            this.informationBindingSource.DataMember = "information";
+            this.informationBindingSource.DataSource = this.notesDataSet;
             // 
-            // labelTitle
+            // notesDataSet
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(19, 78);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(46, 23);
-            this.labelTitle.TabIndex = 1;
-            this.labelTitle.Text = "Title";
+            this.notesDataSet.DataSetName = "notesDataSet";
+            this.notesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBoxTitle
+            // informationTableAdapter
             // 
-            this.textBoxTitle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTitle.Location = new System.Drawing.Point(71, 80);
-            this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(284, 27);
-            this.textBoxTitle.TabIndex = 2;
+            this.informationTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // buttonAddNote
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 23);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Note Details:-";
+            this.buttonAddNote.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddNote.Location = new System.Drawing.Point(671, 9);
+            this.buttonAddNote.Name = "buttonAddNote";
+            this.buttonAddNote.Size = new System.Drawing.Size(38, 35);
+            this.buttonAddNote.TabIndex = 1;
+            this.buttonAddNote.Text = "+";
+            this.buttonAddNote.UseVisualStyleBackColor = true;
+            this.buttonAddNote.Click += new System.EventHandler(this.buttonAddNote_Click);
             // 
-            // richTextBoxNote
+            // labelMyNotes
             // 
-            this.richTextBoxNote.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxNote.Location = new System.Drawing.Point(12, 150);
-            this.richTextBoxNote.Name = "richTextBoxNote";
-            this.richTextBoxNote.Size = new System.Drawing.Size(343, 134);
-            this.richTextBoxNote.TabIndex = 4;
-            this.richTextBoxNote.Text = "";
+            this.labelMyNotes.AutoSize = true;
+            this.labelMyNotes.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMyNotes.Location = new System.Drawing.Point(12, 9);
+            this.labelMyNotes.Name = "labelMyNotes";
+            this.labelMyNotes.Size = new System.Drawing.Size(109, 29);
+            this.labelMyNotes.TabIndex = 2;
+            this.labelMyNotes.Text = "My Notes";
             // 
-            // buttonAdd
+            // dataGridViewNotes
             // 
-            this.buttonAdd.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(265, 292);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(90, 23);
-            this.buttonAdd.TabIndex = 5;
-            this.buttonAdd.Text = "Add Note";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            this.dataGridViewNotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNotes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.noteTitle,
+            this.note,
+            this.image,
+            this.delete});
+            this.dataGridViewNotes.Location = new System.Drawing.Point(13, 62);
+            this.dataGridViewNotes.Name = "dataGridViewNotes";
+            this.dataGridViewNotes.Size = new System.Drawing.Size(694, 328);
+            this.dataGridViewNotes.TabIndex = 3;
+            this.dataGridViewNotes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNotes_CellContentClick);
             // 
-            // buttonSignOut
+            // noteTitle
             // 
-            this.buttonSignOut.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSignOut.Location = new System.Drawing.Point(12, 292);
-            this.buttonSignOut.Name = "buttonSignOut";
-            this.buttonSignOut.Size = new System.Drawing.Size(90, 23);
-            this.buttonSignOut.TabIndex = 6;
-            this.buttonSignOut.Text = "Sign Out";
-            this.buttonSignOut.UseVisualStyleBackColor = true;
-            this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
+            this.noteTitle.FillWeight = 200F;
+            this.noteTitle.HeaderText = "Note Title";
+            this.noteTitle.Name = "noteTitle";
+            this.noteTitle.Width = 200;
+            // 
+            // note
+            // 
+            this.note.FillWeight = 300F;
+            this.note.HeaderText = "Note";
+            this.note.Name = "note";
+            this.note.Width = 300;
+            // 
+            // image
+            // 
+            this.image.HeaderText = "Image";
+            this.image.Name = "image";
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "Delete";
+            this.delete.Name = "delete";
+            this.delete.Text = "";
+            this.delete.Width = 50;
             // 
             // MyNotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 327);
-            this.Controls.Add(this.buttonSignOut);
-            this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.richTextBoxNote);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxTitle);
-            this.Controls.Add(this.labelTitle);
-            this.Controls.Add(this.labeladdnote);
+            this.ClientSize = new System.Drawing.Size(721, 402);
+            this.Controls.Add(this.dataGridViewNotes);
+            this.Controls.Add(this.labelMyNotes);
+            this.Controls.Add(this.buttonAddNote);
             this.Name = "MyNotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MyNotes";
+            this.Text = "My Notes";
+            this.Load += new System.EventHandler(this.MyNotes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.informationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notesDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labeladdnote;
-        private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.TextBox textBoxTitle;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBoxNote;
-        private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonSignOut;
+        private notesDataSet notesDataSet;
+        private System.Windows.Forms.BindingSource informationBindingSource;
+        private notesDataSetTableAdapters.informationTableAdapter informationTableAdapter;
+        private System.Windows.Forms.Button buttonAddNote;
+        private System.Windows.Forms.Label labelMyNotes;
+        private System.Windows.Forms.DataGridView dataGridViewNotes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn note;
+        private System.Windows.Forms.DataGridViewImageColumn image;
+        private System.Windows.Forms.DataGridViewButtonColumn delete;
     }
 }

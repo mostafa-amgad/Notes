@@ -63,6 +63,13 @@
   <ItemGroup>
     <Compile Include="Classes\Authentication.cs" />
     <Compile Include="Classes\DatabaseConnection.cs" />
+    <Compile Include="Classes\Note.cs" />
+    <Compile Include="Forms\AddNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddNote.Designer.cs">
+      <DependentUpon>AddNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MyNotes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,8 +88,16 @@
     <Compile Include="Forms\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="notesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddNote.resx">
+      <DependentUpon>AddNote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MyNotes.resx">
       <DependentUpon>MyNotes.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +122,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="notesDataSet.xsc">
+      <DependentUpon>notesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="notesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notesDataSet.xss">
+      <DependentUpon>notesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
