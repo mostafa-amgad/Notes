@@ -84,6 +84,7 @@ namespace Notes.Forms
             labeladdnote.Text = "Edit Your Note";
             buttonAdd.Text = "Save Note";
             isFirstTime = false;
+            Text = "Edit Note";
         }
     }
 }

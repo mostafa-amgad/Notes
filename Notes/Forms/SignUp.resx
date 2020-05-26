@@ -426,11 +426,14 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>316, 259</value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>SignUp</value>
+    <value>Sign Up</value>
   </data>
   <data name="&gt;&gt;errorProviderEmail.Name" xml:space="preserve">
     <value>errorProviderEmail</value>

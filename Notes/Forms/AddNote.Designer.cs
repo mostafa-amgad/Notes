@@ -88,7 +88,7 @@
             this.richTextBoxNote.Location = new System.Drawing.Point(12, 150);
             this.richTextBoxNote.Name = "richTextBoxNote";
             this.richTextBoxNote.Size = new System.Drawing.Size(343, 134);
-            this.richTextBoxNote.TabIndex = 4;
+            this.richTextBoxNote.TabIndex = 3;
             this.richTextBoxNote.Text = "  Type your thoughts.";
             this.richTextBoxNote.Enter += new System.EventHandler(this.richTextBoxNote_Enter);
             // 
@@ -98,7 +98,7 @@
             this.buttonAdd.Location = new System.Drawing.Point(265, 292);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(90, 23);
-            this.buttonAdd.TabIndex = 5;
+            this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Add Note";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
@@ -109,7 +109,7 @@
             this.buttonGoBack.Location = new System.Drawing.Point(12, 292);
             this.buttonGoBack.Name = "buttonGoBack";
             this.buttonGoBack.Size = new System.Drawing.Size(90, 23);
-            this.buttonGoBack.TabIndex = 6;
+            this.buttonGoBack.TabIndex = 4;
             this.buttonGoBack.Text = "Go Back";
             this.buttonGoBack.UseVisualStyleBackColor = true;
             this.buttonGoBack.Click += new System.EventHandler(this.buttonGoBack_Click);
@@ -124,7 +124,7 @@
             this.buttonAddImage.Location = new System.Drawing.Point(255, 121);
             this.buttonAddImage.Name = "buttonAddImage";
             this.buttonAddImage.Size = new System.Drawing.Size(99, 23);
-            this.buttonAddImage.TabIndex = 7;
+            this.buttonAddImage.TabIndex = 5;
             this.buttonAddImage.Text = "Add Image";
             this.buttonAddImage.UseVisualStyleBackColor = true;
             this.buttonAddImage.Click += new System.EventHandler(this.buttonAddImage_Click);
