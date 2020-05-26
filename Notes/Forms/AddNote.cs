@@ -8,7 +8,7 @@ namespace Notes.Forms
     public partial class AddNote : Form
     {
         Bitmap image = null;
-        int noteId;
+        int noteId = -1;
         public AddNote()
         {
             InitializeComponent();
@@ -72,6 +72,7 @@ namespace Notes.Forms
             if (open.ShowDialog() == DialogResult.OK)
             {
                 image = new Bitmap(open.FileName);
+
             }
         }
 

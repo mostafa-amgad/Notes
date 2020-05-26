@@ -125,7 +125,7 @@ namespace Notes.Classes
             }
         }
 
-        public void  Update(int noteId, string updatedTitle, string updatedNote)
+        public void Update(int noteId, string updatedTitle, string updatedNote)
         {
             string query = "Update information SET notetitle = @notetitle, note = @note " +
                 " WHERE id = @id";

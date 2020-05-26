@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="Classes\Authentication.cs" />
     <Compile Include="Classes\DatabaseConnection.cs" />
+    <Compile Include="Classes\ImageConverter.cs" />
     <Compile Include="Classes\Note.cs" />
     <Compile Include="Classes\TextFile.cs" />
     <Compile Include="Forms\AddNote.cs">
