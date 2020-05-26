@@ -41,6 +41,7 @@
             this.image = new System.Windows.Forms.DataGridViewImageColumn();
             this.ShowEdit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.informationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).BeginInit();
@@ -89,7 +90,8 @@
             this.note,
             this.image,
             this.ShowEdit,
-            this.Delete});
+            this.Delete,
+            this.id});
             this.dataGridViewNotes.Location = new System.Drawing.Point(13, 62);
             this.dataGridViewNotes.Name = "dataGridViewNotes";
             this.dataGridViewNotes.Size = new System.Drawing.Size(897, 387);
@@ -140,6 +142,12 @@
             this.Delete.HeaderText = "Delete";
             this.Delete.Name = "Delete";
             // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
             // MyNotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,5 +182,6 @@
         private System.Windows.Forms.DataGridViewImageColumn image;
         private System.Windows.Forms.DataGridViewButtonColumn ShowEdit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
     }
 }

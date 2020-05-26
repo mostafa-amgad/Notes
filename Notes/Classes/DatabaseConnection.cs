@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -109,6 +110,7 @@ namespace Notes.Classes
                     while (reader.Read())
                     {
                         Note note = new Note();
+                        note.noteId = int.Parse(reader["id"].ToString());
                         note.noteTitle = reader["notetitle"].ToString();
                         note.note = reader["note"].ToString();
                         //note.image = reader["image"].GetType();
@@ -125,22 +127,22 @@ namespace Notes.Classes
             }
         }
 
-        public void  Update(string oldTitle,string updatedTitle, string updatedNote)
+        public void  Update(int noteId, string updatedTitle, string updatedNote)
         {
-            string query = "UPDATE information SET notetitle = @notetitle, note = @note " +
-                "WHERE @notetitle = @oldnotetitle";
+            string query = "Update information SET notetitle = @notetitle, note = @note " +
+                " WHERE id = @id";
 
             try
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@oldnotetitle", oldTitle);
                 command.Parameters.AddWithValue("@notetitle", updatedTitle);
                 command.Parameters.AddWithValue("@note", updatedNote);
+                command.Parameters.AddWithValue("@id", noteId);
 
                 command.ExecuteNonQuery();
                 connection.Close();
-                MessageBox.Show("Updated Succecfully");
+                //MessageBox.Show("Updated Succecfully");
             }
             catch (Exception e)
             {

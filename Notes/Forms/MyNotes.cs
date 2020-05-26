@@ -47,7 +47,6 @@ namespace Notes.Forms
             if (e.ColumnIndex == dataGridViewNotes.Columns["Delete"].Index && e.RowIndex >= 0)
             {
                 string title = dataGridViewNotes.Rows[e.RowIndex].Cells[0].Value.ToString();
-                string noteContent = dataGridViewNotes.Rows[e.RowIndex].Cells[1].Value.ToString();
                 DatabaseConnection.GetInstance().Delete(title);
                 dataGridViewNotes.Rows.Remove(dataGridViewNotes.Rows[e.RowIndex]);
             }
@@ -57,7 +56,8 @@ namespace Notes.Forms
                 AddNote note = new AddNote();
                 string title = dataGridViewNotes.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string noteContent = dataGridViewNotes.Rows[e.RowIndex].Cells[1].Value.ToString();
-                note.SetValues(title, noteContent);
+                int noteId = int.Parse(dataGridViewNotes.Rows[e.RowIndex].Cells[5].Value.ToString());
+                note.SetValues(title, noteContent, noteId);
                 note.ShowDialog();
                 Close();
             }
@@ -80,7 +80,7 @@ namespace Notes.Forms
             dataGridViewNotes.Rows.Clear();
             for (int i = 0; i < notes.Count; i++)
             {
-                dataGridViewNotes.Rows.Add(notes[i].noteTitle, notes[i].note, notes[i].image, "Show / Edit", "Delete");
+                dataGridViewNotes.Rows.Add(notes[i].noteTitle, notes[i].note, notes[i].image, "Show / Edit", "Delete", notes[i].noteId);
             }
         }
     }

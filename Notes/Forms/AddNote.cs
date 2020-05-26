@@ -8,7 +8,7 @@ namespace Notes.Forms
     public partial class AddNote : Form
     {
         Bitmap image = null;
-        string oldTitle;
+        int noteId;
         public AddNote()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace Notes.Forms
             }
             else if(!isFirstTime && richTextBoxNote.Text != "" && isVerified && buttonAdd.Text == "Save Note")
             {
-                DatabaseConnection.GetInstance().Update(oldTitle,textBoxTitle.Text, richTextBoxNote.Text);
+                DatabaseConnection.GetInstance().Update(noteId, textBoxTitle.Text, richTextBoxNote.Text);
 
                 GoToHomePage();
             }
@@ -75,13 +75,12 @@ namespace Notes.Forms
             }
         }
 
-        public void SetValues(string title, string note)
+        public void SetValues(string title, string note, int noteId)
         {
             richTextBoxNote.ForeColor = Color.Black;
             textBoxTitle.Text = title;
-            oldTitle = textBoxTitle.Text;
             richTextBoxNote.Text = note;
-
+            this.noteId = noteId;
             labeladdnote.Text = "Edit Your Note";
             buttonAdd.Text = "Save Note";
             isFirstTime = false;
