@@ -2,6 +2,8 @@
 using System;
 using System.Windows.Forms;
 using System.Threading.Tasks;
+using System.Diagnostics;
+
 namespace Notes.Forms
 {
     public partial class SignIn : Form
@@ -13,15 +15,21 @@ namespace Notes.Forms
 
         private void buttonSignIn_Click(object sender, EventArgs e)
         {
-            TextFile.WriteInFile("Files\\CurrentUser.txt", textBoxUsername.Text);
-            Authentication.SignIn(textBoxUsername.Text, textBoxPassword.Text, true).Wait();
+            bool isVerified1 = Validate(ref textBoxUsername, " Username is missing.", ref errorProviderUsername);
+            bool isVerified2 = Validate(ref textBoxPassword, " Password is missing.", ref errorProviderPassword);
 
-            if(Authentication.GetLoginStatus())
+            if(isVerified1 && isVerified2)
             {
-                Hide();
-                MyNotes notes = new MyNotes();
-                notes.ShowDialog();
-                Close();
+                Authentication.SignIn(textBoxUsername.Text, textBoxPassword.Text, true).Wait();
+
+                if (Authentication.GetLoginStatus())
+                {
+                    TextFile.WriteInFile("Files\\CurrentUser.txt", textBoxUsername.Text);
+                    Hide();
+                    MyNotes notes = new MyNotes();
+                    notes.ShowDialog();
+                    Close();
+                }
             }
         }
 
@@ -42,6 +50,36 @@ namespace Notes.Forms
             else
             {
                 textBoxPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        public static bool Validate(ref TextBox textBox, string message, ref ErrorProvider error)
+        {
+            if (string.IsNullOrEmpty(textBox.Text))
+            {
+                error.SetError(textBox, message);
+                return false;
+            }
+            else
+            {
+                error.Clear();
+                return true;
+            }
+        }
+
+        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(textBoxUsername.Text))
+            {
+                errorProviderUsername.Clear();
+            }
+        }
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(textBoxPassword.Text))
+            {
+                errorProviderPassword.Clear();
             }
         }
     }

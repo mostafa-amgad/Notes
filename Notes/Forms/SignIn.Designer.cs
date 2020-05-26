@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
             this.buttonSignIn = new System.Windows.Forms.Button();
             this.buttonSignUp = new System.Windows.Forms.Button();
@@ -39,6 +40,10 @@
             this.labelSignIn = new System.Windows.Forms.Label();
             this.labelWelcome = new System.Windows.Forms.Label();
             this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
+            this.errorProviderUsername = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderPassword = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSignIn
@@ -75,11 +80,13 @@
             resources.ApplyResources(this.textBoxPassword, "textBoxPassword");
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.UseSystemPasswordChar = true;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
             // textBoxUsername
             // 
             resources.ApplyResources(this.textBoxUsername, "textBoxUsername");
             this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
             // labelSignIn
             // 
@@ -98,6 +105,14 @@
             this.checkBoxShowPassword.UseVisualStyleBackColor = true;
             this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
+            // errorProviderUsername
+            // 
+            this.errorProviderUsername.ContainerControl = this;
+            // 
+            // errorProviderPassword
+            // 
+            this.errorProviderPassword.ContainerControl = this;
+            // 
             // SignIn
             // 
             resources.ApplyResources(this, "$this");
@@ -112,6 +127,8 @@
             this.Controls.Add(this.labelSignIn);
             this.Controls.Add(this.labelWelcome);
             this.Name = "SignIn";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +146,7 @@
         private System.Windows.Forms.Label labelSignIn;
         private System.Windows.Forms.Label labelWelcome;
         private System.Windows.Forms.CheckBox checkBoxShowPassword;
+        private System.Windows.Forms.ErrorProvider errorProviderUsername;
+        private System.Windows.Forms.ErrorProvider errorProviderPassword;
     }
 }

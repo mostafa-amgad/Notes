@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labeladdnote = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
@@ -35,6 +36,9 @@
             this.richTextBoxNote = new System.Windows.Forms.RichTextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonGoBack = new System.Windows.Forms.Button();
+            this.errorProviderTitle = new System.Windows.Forms.ErrorProvider(this.components);
+            this.buttonAddImage = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTitle)).BeginInit();
             this.SuspendLayout();
             // 
             // labeladdnote
@@ -59,11 +63,13 @@
             // 
             // textBoxTitle
             // 
+            this.textBoxTitle.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxTitle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTitle.Location = new System.Drawing.Point(71, 80);
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(284, 27);
             this.textBoxTitle.TabIndex = 2;
+            this.textBoxTitle.TextChanged += new System.EventHandler(this.textBoxTitle_TextChanged);
             // 
             // label1
             // 
@@ -78,11 +84,13 @@
             // richTextBoxNote
             // 
             this.richTextBoxNote.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxNote.ForeColor = System.Drawing.Color.Gray;
             this.richTextBoxNote.Location = new System.Drawing.Point(12, 150);
             this.richTextBoxNote.Name = "richTextBoxNote";
             this.richTextBoxNote.Size = new System.Drawing.Size(343, 134);
             this.richTextBoxNote.TabIndex = 4;
-            this.richTextBoxNote.Text = "";
+            this.richTextBoxNote.Text = "  Type your thoughts.";
+            this.richTextBoxNote.Enter += new System.EventHandler(this.richTextBoxNote_Enter);
             // 
             // buttonAdd
             // 
@@ -106,11 +114,27 @@
             this.buttonGoBack.UseVisualStyleBackColor = true;
             this.buttonGoBack.Click += new System.EventHandler(this.buttonGoBack_Click);
             // 
+            // errorProviderTitle
+            // 
+            this.errorProviderTitle.ContainerControl = this;
+            // 
+            // buttonAddImage
+            // 
+            this.buttonAddImage.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddImage.Location = new System.Drawing.Point(255, 121);
+            this.buttonAddImage.Name = "buttonAddImage";
+            this.buttonAddImage.Size = new System.Drawing.Size(99, 23);
+            this.buttonAddImage.TabIndex = 7;
+            this.buttonAddImage.Text = "Add Image";
+            this.buttonAddImage.UseVisualStyleBackColor = true;
+            this.buttonAddImage.Click += new System.EventHandler(this.buttonAddImage_Click);
+            // 
             // AddNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 327);
+            this.ClientSize = new System.Drawing.Size(379, 327);
+            this.Controls.Add(this.buttonAddImage);
             this.Controls.Add(this.buttonGoBack);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.richTextBoxNote);
@@ -121,6 +145,7 @@
             this.Name = "AddNote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Note";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTitle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +160,7 @@
         private System.Windows.Forms.RichTextBox richTextBoxNote;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonGoBack;
+        private System.Windows.Forms.ErrorProvider errorProviderTitle;
+        private System.Windows.Forms.Button buttonAddImage;
     }
 }

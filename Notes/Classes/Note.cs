@@ -12,7 +12,7 @@ namespace Notes.Classes
         public string noteTitle { get; set; }
         public string note { get; set; }
 
-        public Bitmap image { get; set; }
+        public Image image { get; set; }
 
         public Note(string note, string noteTitle, Bitmap image)
         {

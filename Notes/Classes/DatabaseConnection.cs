@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Notes.Classes
@@ -38,11 +40,19 @@ namespace Notes.Classes
             return database;
         }
 
-        public void Insert(string username, string note, string noteTitle)
+        public void Insert(string username, string note, string noteTitle, Bitmap image)
         {
-            string query = "INSERT INTO information (username, note, notetitle)";
-            query += " VALUES (@username, @note, @notetitle)";
-
+            string query;
+            if (image != null)
+            {
+                query = "INSERT INTO information (username, note, notetitle, image)";
+                query += " VALUES (@username, @note, @notetitle, @image)";
+            }
+            else
+            {
+                query = "INSERT INTO information (username, note, notetitle)";
+                query += " VALUES (@username, @note, @notetitle)";
+            }
             try
             {
                 connection.Open();
@@ -52,29 +62,27 @@ namespace Notes.Classes
                 command.Parameters.AddWithValue("@notetitle", noteTitle);
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Your note has been added");
+                //MessageBox.Show("Your note has been added");
+                connection.Close();
             }
             catch(Exception e)
             {
                 MessageBox.Show(e.Message);
             }
-            finally
-            {
-                connection.Close();
-            }
         }
         
         public void Delete(string noteTitle)
         {
-            string query = "DELETE FROM information WHERE notetitle = @notetitle";
+            string query = "DELETE FROM information WHERE notetitle = @notetitle and username = @username";
 
             try
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@notetitle", noteTitle);
+                command.Parameters.AddWithValue("@username", Authentication.Username);
                 command.ExecuteNonQuery();
-                MessageBox.Show("Your data has been deleted");
+                //MessageBox.Show("Your data has been deleted");
             }
             catch(Exception e)
             {
@@ -114,6 +122,29 @@ namespace Notes.Classes
             {
                 MessageBox.Show(e.Message);
                 return null;
+            }
+        }
+
+        public void  Update(string oldTitle,string updatedTitle, string updatedNote)
+        {
+            string query = "UPDATE information SET notetitle = @notetitle, note = @note " +
+                "WHERE @notetitle = @oldnotetitle";
+
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@oldnotetitle", oldTitle);
+                command.Parameters.AddWithValue("@notetitle", updatedTitle);
+                command.Parameters.AddWithValue("@note", updatedNote);
+
+                command.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Updated Succecfully");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
     }

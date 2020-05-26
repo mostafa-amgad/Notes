@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.buttonGoBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,6 +40,12 @@
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.labelSignUp = new System.Windows.Forms.Label();
             this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
+            this.errorProviderEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderUsername = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderPassword = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonGoBack
@@ -57,6 +64,7 @@
             // 
             resources.ApplyResources(this.textBoxEmail, "textBoxEmail");
             this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
             // buttonSignUp
             // 
@@ -98,6 +106,18 @@
             this.checkBoxShowPassword.UseVisualStyleBackColor = true;
             this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
+            // errorProviderEmail
+            // 
+            this.errorProviderEmail.ContainerControl = this;
+            // 
+            // errorProviderUsername
+            // 
+            this.errorProviderUsername.ContainerControl = this;
+            // 
+            // errorProviderPassword
+            // 
+            this.errorProviderPassword.ContainerControl = this;
+            // 
             // SignUp
             // 
             resources.ApplyResources(this, "$this");
@@ -113,6 +133,9 @@
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.labelSignUp);
             this.Name = "SignUp";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +153,8 @@
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label labelSignUp;
         private System.Windows.Forms.CheckBox checkBoxShowPassword;
+        private System.Windows.Forms.ErrorProvider errorProviderEmail;
+        private System.Windows.Forms.ErrorProvider errorProviderUsername;
+        private System.Windows.Forms.ErrorProvider errorProviderPassword;
     }
 }

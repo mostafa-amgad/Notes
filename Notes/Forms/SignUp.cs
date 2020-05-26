@@ -7,6 +7,10 @@ namespace Notes.Forms
     public partial class SignUp : Form
     {
         Timer listenier = new Timer();
+        bool isVerified1;
+        bool isVerified3;
+        bool isVerified2;
+
         public SignUp()
         {
             InitializeComponent();
@@ -33,10 +37,18 @@ namespace Notes.Forms
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
-            Authentication.SignUp(textBoxEmail.Text, textBoxUsername.Text, textBoxPassword.Text).Wait();
+            isVerified1 = SignIn.Validate(ref textBoxEmail, " Email is missing", ref errorProviderEmail);
+            isVerified2 = SignIn.Validate(ref textBoxUsername, " Username is missing", ref errorProviderUsername);
+            isVerified3 = SignIn.Validate(ref textBoxPassword, " Password is missing", ref errorProviderPassword);
 
-            Cursor = Cursors.WaitCursor;
-            listenier.Start();
+
+            if (isVerified1 && isVerified2 && isVerified3)
+            {
+                Authentication.SignUp(textBoxEmail.Text, textBoxUsername.Text, textBoxPassword.Text).Wait();
+
+                Cursor = Cursors.WaitCursor;
+                listenier.Start();
+            }
         }
 
         private void buttonGoBack_Click(object sender, EventArgs e)
@@ -56,6 +68,19 @@ namespace Notes.Forms
             else
             {
                 textBoxPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void textBoxEmail_TextChanged(object sender, EventArgs e)
+        {
+            if((!textBoxEmail.Text.Contains("@") && !textBoxEmail.Text.Contains(".com")) 
+                || (!textBoxEmail.Text.Contains("@") && !textBoxEmail.Text.Contains(".edu")))
+            {
+                errorProviderEmail.SetError(textBoxEmail, " Please Enter a valid email");
+            }
+            else if (!string.IsNullOrEmpty(textBoxEmail.Text))
+            {
+                errorProviderEmail.Clear();
             }
         }
     }

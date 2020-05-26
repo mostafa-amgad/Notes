@@ -398,6 +398,9 @@
   <data name="&gt;&gt;checkBoxShowPassword.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="errorProviderUsername.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -411,10 +414,25 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Sign In</value>
   </data>
+  <data name="&gt;&gt;errorProviderUsername.Name" xml:space="preserve">
+    <value>errorProviderUsername</value>
+  </data>
+  <data name="&gt;&gt;errorProviderUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProviderPassword.Name" xml:space="preserve">
+    <value>errorProviderPassword</value>
+  </data>
+  <data name="&gt;&gt;errorProviderPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>SignIn</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <metadata name="errorProviderPassword.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>195, 17</value>
+  </metadata>
 </root>

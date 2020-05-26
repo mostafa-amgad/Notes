@@ -39,6 +39,8 @@
             this.noteTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ShowEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.informationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).BeginInit();
@@ -61,7 +63,7 @@
             // buttonAddNote
             // 
             this.buttonAddNote.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddNote.Location = new System.Drawing.Point(671, 9);
+            this.buttonAddNote.Location = new System.Drawing.Point(872, 12);
             this.buttonAddNote.Name = "buttonAddNote";
             this.buttonAddNote.Size = new System.Drawing.Size(38, 35);
             this.buttonAddNote.TabIndex = 1;
@@ -85,16 +87,18 @@
             this.dataGridViewNotes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.noteTitle,
             this.note,
-            this.image});
+            this.image,
+            this.ShowEdit,
+            this.Delete});
             this.dataGridViewNotes.Location = new System.Drawing.Point(13, 62);
             this.dataGridViewNotes.Name = "dataGridViewNotes";
-            this.dataGridViewNotes.Size = new System.Drawing.Size(694, 328);
+            this.dataGridViewNotes.Size = new System.Drawing.Size(897, 387);
             this.dataGridViewNotes.TabIndex = 3;
             this.dataGridViewNotes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNotes_CellContentClick);
             // 
             // buttonSignOut
             // 
-            this.buttonSignOut.Location = new System.Drawing.Point(17, 401);
+            this.buttonSignOut.Location = new System.Drawing.Point(12, 455);
             this.buttonSignOut.Name = "buttonSignOut";
             this.buttonSignOut.Size = new System.Drawing.Size(104, 23);
             this.buttonSignOut.TabIndex = 4;
@@ -107,6 +111,7 @@
             this.noteTitle.FillWeight = 200F;
             this.noteTitle.HeaderText = "Note Title";
             this.noteTitle.Name = "noteTitle";
+            this.noteTitle.ReadOnly = true;
             this.noteTitle.Width = 200;
             // 
             // note
@@ -114,6 +119,7 @@
             this.note.FillWeight = 300F;
             this.note.HeaderText = "Note";
             this.note.Name = "note";
+            this.note.ReadOnly = true;
             this.note.Width = 300;
             // 
             // image
@@ -121,13 +127,24 @@
             this.image.FillWeight = 150F;
             this.image.HeaderText = "Image";
             this.image.Name = "image";
+            this.image.ReadOnly = true;
             this.image.Width = 150;
+            // 
+            // ShowEdit
+            // 
+            this.ShowEdit.HeaderText = "Show / Edit";
+            this.ShowEdit.Name = "ShowEdit";
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
             // 
             // MyNotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 436);
+            this.ClientSize = new System.Drawing.Size(922, 490);
             this.Controls.Add(this.buttonSignOut);
             this.Controls.Add(this.dataGridViewNotes);
             this.Controls.Add(this.labelMyNotes);
@@ -155,5 +172,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn noteTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn note;
         private System.Windows.Forms.DataGridViewImageColumn image;
+        private System.Windows.Forms.DataGridViewButtonColumn ShowEdit;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
