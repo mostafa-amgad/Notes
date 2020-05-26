@@ -42,20 +42,20 @@ namespace Notes.Classes
 
             try
             {
-                SignUpResponse response = await providerClient.SignUpAsync(signUpRequest);
+                SignUpResponse response = await providerClient.SignUpAsync(signUpRequest).ConfigureAwait(false);
                 Debug.WriteLine("SUCC");
-                isSignedIn = true;
                 Username = username;
+
+                MessageBox.Show("An Email Sent With Verification URL");
             }
             catch(Exception e)
             {
                 MessageBox.Show(e.Message);
-                Debug.WriteLine("Erorr Sign Up" + e.Message);
                 return;
             }
         }
 
-        public static async Task SignIn(string username, string password)
+        public static async Task SignIn(string username, string password, bool isShowError)
         {
             AmazonCognitoIdentityProviderClient providerClient = new AmazonCognitoIdentityProviderClient(new AnonymousAWSCredentials()
                 , region);
@@ -76,7 +76,8 @@ namespace Notes.Classes
             }
             catch(Exception e)
             {
-                MessageBox.Show(e.Message);
+                if (isShowError)
+                    MessageBox.Show(e.Message);
                 return;
             }
         }

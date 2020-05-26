@@ -35,11 +35,10 @@
             this.buttonAddNote = new System.Windows.Forms.Button();
             this.labelMyNotes = new System.Windows.Forms.Label();
             this.dataGridViewNotes = new System.Windows.Forms.DataGridView();
+            this.buttonSignOut = new System.Windows.Forms.Button();
             this.noteTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.buttonSignOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.informationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNotes)).BeginInit();
@@ -86,13 +85,22 @@
             this.dataGridViewNotes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.noteTitle,
             this.note,
-            this.image,
-            this.delete});
+            this.image});
             this.dataGridViewNotes.Location = new System.Drawing.Point(13, 62);
             this.dataGridViewNotes.Name = "dataGridViewNotes";
             this.dataGridViewNotes.Size = new System.Drawing.Size(694, 328);
             this.dataGridViewNotes.TabIndex = 3;
             this.dataGridViewNotes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNotes_CellContentClick);
+            // 
+            // buttonSignOut
+            // 
+            this.buttonSignOut.Location = new System.Drawing.Point(17, 401);
+            this.buttonSignOut.Name = "buttonSignOut";
+            this.buttonSignOut.Size = new System.Drawing.Size(104, 23);
+            this.buttonSignOut.TabIndex = 4;
+            this.buttonSignOut.Text = "Sign Out";
+            this.buttonSignOut.UseVisualStyleBackColor = true;
+            this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
             // 
             // noteTitle
             // 
@@ -110,25 +118,10 @@
             // 
             // image
             // 
+            this.image.FillWeight = 150F;
             this.image.HeaderText = "Image";
             this.image.Name = "image";
-            // 
-            // delete
-            // 
-            this.delete.HeaderText = "Delete";
-            this.delete.Name = "delete";
-            this.delete.Text = "";
-            this.delete.Width = 50;
-            // 
-            // buttonSignOut
-            // 
-            this.buttonSignOut.Location = new System.Drawing.Point(17, 401);
-            this.buttonSignOut.Name = "buttonSignOut";
-            this.buttonSignOut.Size = new System.Drawing.Size(104, 23);
-            this.buttonSignOut.TabIndex = 4;
-            this.buttonSignOut.Text = "Sign Out";
-            this.buttonSignOut.UseVisualStyleBackColor = true;
-            this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
+            this.image.Width = 150;
             // 
             // MyNotes
             // 
@@ -158,10 +151,9 @@
         private System.Windows.Forms.Button buttonAddNote;
         private System.Windows.Forms.Label labelMyNotes;
         private System.Windows.Forms.DataGridView dataGridViewNotes;
+        private System.Windows.Forms.Button buttonSignOut;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteTitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn note;
         private System.Windows.Forms.DataGridViewImageColumn image;
-        private System.Windows.Forms.DataGridViewButtonColumn delete;
-        private System.Windows.Forms.Button buttonSignOut;
     }
 }

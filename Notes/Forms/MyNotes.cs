@@ -1,6 +1,7 @@
 ﻿using Notes.Classes;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Notes.Forms
@@ -10,6 +11,8 @@ namespace Notes.Forms
         public MyNotes()
         {
             InitializeComponent();
+
+            labelMyNotes.Text = "Welcome Back, " + Authentication.Username;
         }
 
         private void MyNotes_Load(object sender, EventArgs e)
@@ -38,6 +41,7 @@ namespace Notes.Forms
         private void buttonSignOut_Click(object sender, EventArgs e)
         {
             TextFile.WriteInFile("Files\\CurrentUser.txt", "");
+            
             Hide();
             SignIn signIn = new SignIn();
             signIn.ShowDialog();

@@ -96,6 +96,7 @@
             resources.ApplyResources(this.checkBoxShowPassword, "checkBoxShowPassword");
             this.checkBoxShowPassword.Name = "checkBoxShowPassword";
             this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
             // SignIn
             // 
